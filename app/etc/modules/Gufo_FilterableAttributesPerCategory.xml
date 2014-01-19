@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gufo_FilterableAttributesPerCategory>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Gufo_FilterableAttributesPerCategory>
+    </modules>
+</config>
