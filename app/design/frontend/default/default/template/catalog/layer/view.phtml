@@ -31,6 +31,12 @@
  * @see Mage_Catalog_Block_Layer_View
  */
 ?>
+
+<?php
+$_category = Mage::registry('current_category');
+$_filterToHide = $_category->getFiltersToHide();
+?>
+
 <?php if($this->canShowBlock()): ?>
 <div class="block block-layered-nav">
     <div class="block-title">
@@ -46,15 +52,12 @@
             <dl id="narrow-by-list">
                 <?php $_filters = $this->getFilters() ?>
                 <?php foreach ($_filters as $_filter): ?>
-
-                <!-- TODO: add "if" condition on the value of the category attribute "filters_to_hide"  -->
-
-                <?php if($_filter->getItemsCount()): ?>
+                <?php if ($_filter->_filter->getRequestVar() != $_filterToHide): ?>
+                <?php if ($_filter->getItemsCount()): ?>
                     <dt><?php echo $this->__($_filter->getName()) ?></dt>
                     <dd><?php echo $_filter->getHtml() ?></dd>
                 <?php endif; ?>
-
-
+                <?php endif; ?>
                 <?php endforeach; ?>
             </dl>
             <script type="text/javascript">decorateDataList('narrow-by-list')</script>
