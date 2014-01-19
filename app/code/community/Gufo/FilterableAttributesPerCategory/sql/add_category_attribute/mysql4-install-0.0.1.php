@@ -1,10 +1,10 @@
 <?php
 $this->startSetup();
-$this->addAttribute('catalog_category', 'custom_attribute', array(
+$this->addAttribute('catalog_category', 'filters_to_hide', array(
     'group'         => 'General',
     'input'         => 'textarea',
     'type'          => 'text',
-    'label'         => 'Custom attribute',
+    'label'         => 'Filters to hide',
     'backend'       => '',
     'visible'       => true,
     'required'      => false,
