@@ -47,9 +47,7 @@
                 <?php $_filters = $this->getFilters() ?>
                 <?php foreach ($_filters as $_filter): ?>
 
-
                 <!-- TODO: add "if" condition on the value of the category attribute "filters_to_hide"  -->
-                
 
                 <?php if($_filter->getItemsCount()): ?>
                     <dt><?php echo $this->__($_filter->getName()) ?></dt>
