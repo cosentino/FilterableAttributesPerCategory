@@ -9,3 +9,10 @@ A Magento Extension that let you hide some filterable attributes from the Layere
 
 - Eventually Re-enable Compilation
 - Empy Magento Cache
+
+
+
+FUTURE FEATURES:
+========
+- Apply show/hide logic also when the category filter is applied
+- Support Flat Category

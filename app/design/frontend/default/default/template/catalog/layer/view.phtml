@@ -34,7 +34,7 @@
 
 <?php
 $_category = Mage::registry('current_category');
-$_filtersToHide = explode(',', $_category->getFiltersToHide());
+$_filtersToHide =  array_map('trim', explode(',', $_category->getFiltersToHide()));
 ?>
 
 <?php if($this->canShowBlock()): ?>
